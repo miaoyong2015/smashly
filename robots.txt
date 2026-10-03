@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://miaoyong2015.github.io/smashly/sitemap.xml

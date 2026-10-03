@@ -1,6 +1,25 @@
-:root{--bg:#0d1721;--fg:#eef3f6;--muted:#9fb0bd;--ball:#d7f04a}
-@media (prefers-color-scheme: light){:root{--bg:#f6f8f9;--fg:#0d1721;--muted:#4f5f6b;--ball:#5a7000}}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-main{max-width:680px;margin:0 auto;padding:48px 20px 80px}
-h1{font-size:34px;margin:0 0 8px}h2{font-size:20px;margin-top:32px}
-a{color:var(--ball)}p,li{color:var(--fg)}.muted{color:var(--muted)}
+:root{--bg:#0b141b;--panel:#121f28;--fg:#eef3f6;--muted:#9fb0bd;--ball:#d7f04a;--sky:#5ac8fa;--line:#22323d}
+@media (prefers-color-scheme: light){:root{--bg:#f5f8f6;--panel:#ffffff;--fg:#0d1721;--muted:#4f5f6b;--ball:#5a7000;--sky:#0a6aa0;--line:#dfe6e2}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:40px 20px 80px}
+article{max-width:720px;margin:0 auto}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:.2em 0;letter-spacing:-.02em}
+h2{font-size:26px;margin-top:48px}
+h3{font-size:19px;margin-bottom:4px}
+a{color:var(--ball)}
+.muted{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero img.shot{width:100%;max-width:380px;border-radius:28px;justify-self:center}
+.brand{display:flex;gap:12px;align-items:center;font-weight:800;font-size:20px}
+.brand img{width:44px;height:44px;border-radius:10px}
+.badge img{height:54px;margin-top:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.shots img{height:420px;border-radius:22px}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+.cta{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:40px}
+footer{margin-top:60px;color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.shots img{height:340px}}
